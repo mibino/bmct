@@ -3,6 +3,7 @@ import wx
 from launchgame import *
 from user import *
 import wx.html2
+import webbrowser
 
 class homepage(wx.Frame):
 	def __init__(self):
@@ -40,7 +41,7 @@ class homepage(wx.Frame):
 		self.an6.SetOwnBackgroundColour((255, 128, 0, 255))
 		self.an6.Bind(wx.EVT_BUTTON,self.an6_anbdj)
 		self.homepagenews = wx.html2.WebView.New(self.homepage,size=(660, 380),pos=(120, 82))
-		self.homepagenews.LoadURL("http://luxiaso.w1.luyouxia.net/launcher/")
+		self.homepagenews.LoadURL("http://bmct.web1337.net/launcherinfo/homepage.html")
 		self.Bind(wx.EVT_CLOSE, self.OnFormClosed, self)
 
 
@@ -51,7 +52,8 @@ class homepage(wx.Frame):
 
 
 	def bbs_anbdj(self,event):
-		print('bbs,按钮被单击')
+		webbrowser.open("http://bedrockmcbbs.web1337.net/")
+
 
 
 	def settings_anbdj(self,event):
